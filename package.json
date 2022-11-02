@@ -9,7 +9,7 @@
 		"lint": "prettier --plugin-search-dir . --check .",
 		"format": "prettier --plugin-search-dir . --write .",
 		"predeploy": "vite build",
-		"deploy": "gh-pages -d build"
+		"deploy": "touch build/.nojekyll && gh-pages -d build -t true"
 	},
 	"devDependencies": {
 		"@sveltejs/adapter-auto": "next",
