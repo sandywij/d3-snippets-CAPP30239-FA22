@@ -4,6 +4,14 @@
 			"text": "D3 in Depth",
 			"link": "https://www.d3indepth.com/",
 			"blurb": "Collection of d3 code tutorials"
+		},
+		{
+			"text": "The D3.js  Graph Gallery",
+			"link": "https://d3-graph-gallery.com/",
+			"blurb": "Step by step tutorials of common graph types"
 		}
 	]
 }
+
+
+
