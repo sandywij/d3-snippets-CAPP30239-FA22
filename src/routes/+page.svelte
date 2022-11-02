@@ -1,7 +1,5 @@
 <script>
-	import Counter from './Counter.svelte';
-	import welcome from '$lib/images/svelte-welcome.webp';
-	import welcome_fallback from '$lib/images/svelte-welcome.png';
+	import data from '$lib/links.json';
 </script>
 
 <svelte:head>
@@ -10,50 +8,79 @@
 </svelte:head>
 
 <section>
-	<h1>
-		<span class="welcome">
-			<picture>
-				<source srcset={welcome} type="image/webp" />
-				<img src={welcome_fallback} alt="Welcome" />
-			</picture>
-		</span>
+	<h1>D3 Snippets for CAPP30239 FA22</h1>
 
-		to your new<br />SvelteKit app
-	</h1>
+	<p>
+		To request a snippet/demo, <a
+			href="https://github.com/sandywij/d3-snippets-CAPP30239-FA22/issues/new"
+			>create an issue on Github</a
+		>.
+	</p>
 
-	<h2>
-		try editing <strong>src/routes/+page.svelte</strong>
-	</h2>
+	<ul>
+		Please include:
+		<li>What you are trying to acheive,</li>
+		<li>What you have tried or the issue you're running into,</li>
+		<li>A link to your attempt</li>
+	</ul>
+</section>
 
-	<Counter />
+<section>
+	<h2>Snippets and Demos</h2>
+	<p>Coming soon</p>
+	<div class="row-wrap" />
+</section>
+
+<section>
+	<h2>Helpful Resources</h2>
+	<div class="row-wrap">
+		{#each data.links as l}
+			<a href={l.link}>
+				<div class="box">
+					<h3>{l.text}</h3>
+					<p>{l.blurb}</p>
+				</div>
+			</a>
+		{/each}
+	</div>
 </section>
 
 <style>
 	section {
 		display: flex;
 		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		flex: 0.6;
+		background-color: white;
+		padding: 1em;
+		margin: 1.5em;
 	}
 
 	h1 {
 		width: 100%;
 	}
 
-	.welcome {
-		display: block;
-		position: relative;
-		width: 100%;
-		height: 0;
-		padding: 0 0 calc(100% * 495 / 2048) 0;
+	.row-wrap {
+		flex-direction: row;
+		flex-wrap: wrap;
 	}
 
-	.welcome img {
-		position: absolute;
-		width: 100%;
-		height: 100%;
-		top: 0;
-		display: block;
+	.box {
+		flex: 1 1 25%;
+		padding: 1em;
+		background-color: #d1f28b;
+		color: #1a3b47;
+	}
+
+	a:has(div.box) {
+		text-decoration: none;
+	}
+
+	.box:hover,
+	a:focus > .box {
+		color: #d1f28b;
+		background-color: #1a3b47;
+		font-weight: bold;
+		box-shadow: 10px 10px 0 #d1f28b;
+		transition-duration: 0.2s;
+		transition-delay: 0.1s;
 	}
 </style>
