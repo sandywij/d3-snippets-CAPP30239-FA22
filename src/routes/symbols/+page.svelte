@@ -7,10 +7,11 @@
 	let container;
 
 	let svg;
-	let promise;
+	let code;
 
-	onMount(() => {
-		promise = fetch('snippets/symbols.js').then((x) => x.text());
+	onMount(async () => {
+		const promise = await fetch('snippets/symbols.js');
+		code = await promise.text();
 
 		svg = chart(data);
 
@@ -26,9 +27,9 @@
 
 <div class="page-container">
 	<div class="code">
-		{#await promise then data}
-			<Code value={data + 'chart(data)'} />
-		{/await}
+		{#if code}
+			<Code value={code + 'chart(data)'} />
+		{/if}
 	</div>
 	<div bind:this={container} class="svg-container" />
 </div>
