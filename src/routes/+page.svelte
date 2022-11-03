@@ -64,10 +64,11 @@
 	}
 
 	.box {
-		flex: 1 1 25%;
+		width: 25%;
 		padding: 1em;
 		background-color: #d1f28b;
 		color: #1a3b47;
+		margin: 1em;
 	}
 
 	a:has(div.box) {
