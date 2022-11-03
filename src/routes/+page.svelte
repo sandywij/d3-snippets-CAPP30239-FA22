@@ -27,25 +27,38 @@
 
 <section>
 	<h2>Snippets and Demos</h2>
-	<p>Coming soon</p>
-	<div class="row-wrap" />
-</section>
-
-<section>
-	<h2>Helpful Resources</h2>
-	<div class="row-wrap">
-		{#each data.links as l}
+	{#each data.snippets as l}
+		<div class="box-container">
 			<a href={l.link}>
 				<div class="box">
 					<h3>{l.text}</h3>
 					<p>{l.blurb}</p>
 				</div>
 			</a>
+		</div>
+	{/each}
+</section>
+
+<section>
+	<h2>Helpful Resources</h2>
+	<div class="row-wrap">
+		{#each data.links as l}
+			<div class="box-container">
+				<a href={l.link}>
+					<div class="box">
+						<h3>{l.text}</h3>
+						<p>{l.blurb}</p>
+					</div>
+				</a>
+			</div>
 		{/each}
 	</div>
 </section>
 
 <style>
+	:global(main) {
+		max-width: 64rem;
+	}
 	section {
 		display: flex;
 		flex-direction: column;
@@ -59,19 +72,24 @@
 	}
 
 	.row-wrap {
+		display: flex;
 		flex-direction: row;
 		flex-wrap: wrap;
 	}
 
 	.box {
-		width: 25%;
 		padding: 1em;
 		background-color: #d1f28b;
 		color: #1a3b47;
 		margin: 1em;
 	}
 
-	a:has(div.box) {
+	.box-container {
+		text-decoration: none;
+		flex: 1 1 400px;
+	}
+
+	.box-container > a {
 		text-decoration: none;
 	}
 

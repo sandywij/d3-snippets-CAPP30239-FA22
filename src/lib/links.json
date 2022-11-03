@@ -10,8 +10,12 @@
 			"link": "https://d3-graph-gallery.com/",
 			"blurb": "Step by step tutorials of common graph types"
 		}
+	],
+	"snippets": [
+		{
+			"text": "Adding Symbols in a Scatterplot",
+			"link": "/symbols",
+			"blurb": ""
+		}
 	]
 }
-
-
-
