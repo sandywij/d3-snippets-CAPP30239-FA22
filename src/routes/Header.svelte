@@ -4,14 +4,15 @@
 
 <header>
 	<nav>
-		<span style="font-size: 24px;">D3-Snippets</span>
+		<span style="font-size: 24px;"><a href="/">D3-Snippets</a></span>
 		<ul>
 			<li aria-current={$page.url.pathname === '/' ? 'page' : undefined}>
 				<a href="/">Home</a>
 			</li>
 
 			<li>
-				<a href="ttps://github.com/sandywij/d3-snippets-CAPP30239-FA22/issues/new">File a request</a
+				<a href="https://github.com/sandywij/d3-snippets-CAPP30239-FA22/issues/new"
+					>File a request</a
 				>
 			</li>
 		</ul>

@@ -56,9 +56,6 @@
 </section>
 
 <style>
-	:global(main) {
-		max-width: 64rem;
-	}
 	section {
 		display: flex;
 		flex-direction: column;
