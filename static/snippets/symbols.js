@@ -82,10 +82,7 @@ function Scatterplot(
 	// Construct scales and axes.
 	const xScale = xType(xDomain, xRange);
 	const yScale = yType(yDomain, yRange);
-	const xAxis = d3
-		.axisBottom(xScale)
-		.ticks(width / 80, xFormat)
-		.tickFormat(d3.timeFormat('%b'));
+	const xAxis = d3.axisBottom(xScale).ticks(width / 80, xFormat);
 	const yAxis = d3.axisLeft(yScale).ticks(height / 50, yFormat);
 
 	const svg = d3

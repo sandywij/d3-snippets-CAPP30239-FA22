@@ -13,8 +13,9 @@
 		const promise = await fetch('snippets/symbols.js');
 		code = await promise.text();
 
-		svg = chart(data);
+		code = code + "document.getElementById('svg-container').appendChild(chart);";
 
+		svg = chart(data);
 		container.appendChild(svg);
 	});
 </script>
@@ -26,12 +27,12 @@
 <h1>Adding Symbols to Scatter Plot</h1>
 
 <div class="page-container">
-	<div class="code">
+	<div id="code" class="container">
 		{#if code}
-			<Code value={code + 'chart(data)'} />
+			<Code value={code} />
 		{/if}
 	</div>
-	<div bind:this={container} class="svg-container" />
+	<div bind:this={container} id="svg-container" class="container" />
 </div>
 
 <style>
@@ -40,8 +41,12 @@
 		width: 100%;
 	}
 
-	.code {
-		max-width: 50%;
+	.container {
+		padding: 1rem;
+		width: 50%;
+	}
+
+	#code {
 		max-height: 80vh;
 		overflow: scroll;
 	}

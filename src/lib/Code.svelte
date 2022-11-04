@@ -7,3 +7,10 @@
 </script>
 
 <CodeMirror bind:value lang={javascript()} theme={oneDark} />
+
+<style>
+	:global(.codemirror-wrapper) {
+		max-height: 80vh;
+		overflow: scroll;
+	}
+</style>
