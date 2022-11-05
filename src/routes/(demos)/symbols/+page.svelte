@@ -13,6 +13,8 @@
 		const promise = await fetch('snippets/symbols.js');
 		code = await promise.text();
 
+		document.body.append();
+
 		code = code + "document.getElementById('svg-container').appendChild(chart);";
 
 		svg = chart(data);
