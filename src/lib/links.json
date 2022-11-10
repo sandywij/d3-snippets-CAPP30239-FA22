@@ -9,6 +9,17 @@
 			"text": "The D3.js  Graph Gallery",
 			"link": "https://d3-graph-gallery.com/",
 			"blurb": "Step by step tutorials of common graph types"
+		},
+		{
+			"text": "Type-Scale",
+			"link": "https://type-scale.com/",
+			"blurb": "Generate CSS style for typography"
+		},
+
+		{
+			"text": "Open-Color",
+			"link": "https://yeun.github.io/open-color/",
+			"blurb": "Open color is an open-source color scheme"
 		}
 	],
 	"snippets": [
