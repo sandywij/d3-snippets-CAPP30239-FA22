@@ -27,16 +27,18 @@
 
 <section>
 	<h2>Snippets and Demos</h2>
-	{#each data.snippets as l}
-		<div class="box-container">
-			<a href={l.link}>
-				<div class="box">
-					<h3>{l.text}</h3>
-					<p>{l.blurb}</p>
-				</div>
-			</a>
-		</div>
-	{/each}
+	<div class="row-wrap">
+		{#each data.snippets as l}
+			<div class="box-container">
+				<a href={l.link}>
+					<div class="box">
+						<h3>{l.text}</h3>
+						<p>{l.blurb}</p>
+					</div>
+				</a>
+			</div>
+		{/each}
+	</div>
 </section>
 
 <section>
