@@ -20,6 +20,16 @@
 			"text": "Open-Color",
 			"link": "https://yeun.github.io/open-color/",
 			"blurb": "Open color is an open-source color scheme"
+		},
+			{
+			"text": "CSS Layout",
+			"link": "https://csslayout.io/",
+			"blurb": "CSS templates example for common UI layouts"
+		},
+			{
+			"text": "How do Flexbox work?",
+			"link": "https://web.dev/learn/css/flexbox/",
+			"blurb": "Flexbox demo and explanation"
 		}
 	],
 	"snippets": [
